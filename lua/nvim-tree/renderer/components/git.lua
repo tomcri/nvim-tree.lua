@@ -185,6 +185,12 @@ function M.setup(opts)
     M.get_highlight = nil_
   end
 
+  if opts.renderer.highlight_icons_git then
+    M.get_highlight_icons_git = get_highlight_
+  else
+    M.get_highlight_icons_git = nil_
+  end
+
   M.git_show_on_open_dirs = opts.git.show_on_open_dirs
 end
 

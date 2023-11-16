@@ -386,6 +386,7 @@ Following is the default configuration. See |nvim-tree-opts| for details.
         special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
         symlink_destination = true,
         highlight_git = false,
+        highlight_icons_git = false,
         highlight_diagnostics = false,
         highlight_opened_files = "none",
         highlight_modified = "none",
@@ -830,6 +831,11 @@ Whether to show the destination of the symlink.
 
 *nvim-tree.renderer.highlight_git*
 Enable highlight for git attributes using `NvimTreeGit*` highlight groups.
+Requires |nvim-tree.git.enable|
+  Type: `boolean`, Default: `false`
+
+*nvim-tree.renderer.highlight_icons_git*
+Enable highlight for tree icons based on git attributes using `NvimTreeGit*` highlight groups.
 Requires |nvim-tree.git.enable|
   Type: `boolean`, Default: `false`
 

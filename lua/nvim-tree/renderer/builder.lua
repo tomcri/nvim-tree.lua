@@ -309,6 +309,11 @@ function Builder:_get_highlight_override(node, unloaded_bufnr)
     name_hl = git_highlight
   end
 
+  local get_highlight_icons_git = git.get_highlight_icons_git(node)
+  if get_highlight_icons_git then
+    icon_hl = get_highlight_icons_git
+  end
+
   -- opened file
   if self.highlight_opened_files and vim.fn.bufloaded(node.absolute_path) > 0 and vim.fn.bufnr(node.absolute_path) ~= unloaded_bufnr then
     if self.highlight_opened_files == "all" or self.highlight_opened_files == "name" then
